@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pure CSS Custom Select Dropdown Menus</title>
+  <link rel="stylesheet" href="./style.css">
+
+  <style type="text/css">
+    body {
+      padding: 50px;
+    }
+
+    #demo-1 {
+      width: 200px;
+    }
+
+    #demo-2 {
+      width: 200px;
+    }
+
+    #demo-3 {
+      display: flex;
+      max-width: 404px;
+      margin-top: 4px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id="demo-1" class="select">
+
+    <input class="toggle" type="text" readonly>
+    <div class="arrow"></div>
+
+    <div class="selected">
+      <input id="demo2-gender-male" class="radio" name="gender" value="MALE" type="radio" checked>
+      <div class="value">
+        Gender: Male
+      </div>
+
+      <input id="demo2-gender-female" class="radio" name="gender" value="FEMALE" type="radio">
+      <div class="value">
+        Gender: Female
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <label for="demo2-gender-male" class="value">
+        👨 Male
+      </label>
+
+      <label for="demo2-gender-female" class="value">
+        👩 Female
+      </label>
+    </div>
+
+  </div>
+
+  <div id="demo-2" class="select">
+
+    <input class="toggle" type="text" readonly>
+    <div class="arrow"></div>
+
+    <div class="selected">
+      <input id="d1-18" class="radio" name="age" value="18" type="radio" checked>
+      <div class="value">
+        Age: 18
+      </div>
+
+      <input id="d1-19" class="radio" name="age" value="19" type="radio">
+      <div class="value">
+        Age: 19
+      </div>
+
+      <input id="d1-20" class="radio" name="age" value="20" type="radio">
+      <div class="value">
+        Age: 20
+      </div>
+
+      <input id="d1-21" class="radio" name="age" value="21" type="radio">
+      <div class="value">
+        Age: 21
+      </div>
+
+      <input id="d1-22" class="radio" name="age" value="22" type="radio">
+      <div class="value">
+        Age: 22
+      </div>
+
+      <input id="d1-23" class="radio" name="age" value="23" type="radio">
+      <div class="value">
+        Age: 23
+      </div>
+
+      <input id="d1-24" class="radio" name="age" value="24" type="radio">
+      <div class="value">
+        Age: 24
+      </div>
+
+      <input id="d1-25" class="radio" name="age" value="25" type="radio">
+      <div class="value">
+        Age: 25
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <label for="d1-18" class="value">
+        &rarr; 18
+      </label>
+
+      <label for="d1-19" class="value">
+        &rarr; 19
+      </label>
+
+      <label for="d1-20" class="value">
+        &rarr; 20
+      </label>
+
+      <label for="d1-21" class="value">
+        &rarr; 21
+      </label>
+
+      <label for="d1-22" class="value">
+        &rarr; 22
+      </label>
+
+      <label for="d1-23" class="value">
+        &rarr; 23
+      </label>
+
+      <label for="d1-24" class="value">
+        &rarr; 24
+      </label>
+
+      <label for="d1-25" class="value">
+        &rarr; 25
+      </label>
+    </div>
+
+  </div>
+
+  <div id="demo-3" class="select">
+
+    <input class="toggle" type="text" readonly>
+    <div class="arrow"></div>
+
+    <div class="selected">
+      <input id="d3-CN" class="radio" name="country" value="CN" type="radio">
+      <div class="value">
+        🇨🇳 China
+      </div>
+
+      <input id="d3-IN" class="radio" name="country" value="IN" type="radio" checked>
+      <div class="value">
+        🇮🇳 India
+      </div>
+
+      <input id="d3-RS" class="radio" name="country" value="RS" type="radio">
+      <div class="value">
+        🇷🇺 Russia
+      </div>
+
+      <input id="d3-UK" class="radio" name="country" value="UK" type="radio">
+      <div class="value">
+        🇬🇧 United Kingdom
+      </div>
+
+      <input id="d3-USA" class="radio" name="country" value="USA" type="radio">
+      <div class="value">
+        🇺🇸 United States
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <label for="d3-CN" class="value">
+        🇨🇳 China
+      </label>
+
+      <label for="d3-IN" class="value">
+        🇮🇳 India
+      </label>
+
+      <label for="d3-RS" class="value">
+        🇷🇺 Russia
+      </label>
+
+      <label for="d3-UK" class="value">
+        🇬🇧 United Kingdom
+      </label>
+
+      <label for="d3-USA" class="value">
+        🇺🇸 United States
+      </label>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+
+.select {
+  position: relative;
+  font-family: sans-serif;
+  vertical-align: middle;
+  display: inline-flex;
+}
+.select .radio {
+  position: absolute;
+  opacity: 0 !important;
+  z-index: -1;
+}
+.select .selected {
+  width: 100%;
+  height: 40px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+  padding-left: 10px;
+  padding-right: 36px;
+  background: #ffffff;
+  border: 2px solid;
+  border-color: #212121;
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: block;
+}
+.select .selected .value {
+  line-height: 36px;
+}
+.select .selected .radio:not(:checked) + .value {
+  display: none;
+}
+.select .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background-color: #ffffff;
+  border: 2px solid;
+  border-top: none;
+  border-radius: 0 0 2px 2px;
+  box-sizing: border-box;
+  overflow: auto;
+  z-index: 10;
+  transition: opacity 0s, border-color 0s, max-height 0s;
+  transition-delay: 0.125s, 0.125s, 0.125s;
+}
+.select .dropdown .value {
+  line-height: 1.5;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  display: block;
+}
+.select .dropdown .value:hover {
+  background: lightblue;
+}
+.select .arrow,
+.select .toggle {
+  cursor: pointer;
+}
+.select .arrow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.select .arrow:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  width: 0;
+  height: 0;
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent;
+}
+.select .toggle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: none;
+  outline: none;
+  border: none;
+}
+.select .toggle:not(:focus) {
+  z-index: 2;
+}
+.select .toggle:not(:focus) ~ .arrow {
+  z-index: 1;
+}
+.select .toggle:not(:focus) ~ .arrow:after {
+  border-top-color: #212121;
+  border-bottom-color: transparent;
+  margin-top: -3px;
+}
+.select .toggle:not(:focus) ~ .selected {
+  border-radius: 2px;
+}
+.select .toggle:not(:focus) ~ .dropdown {
+  max-height: 0;
+  border-color: transparent;
+  opacity: 0;
+}
+.select .toggle:focus {
+  z-index: 1;
+}
+.select .toggle:focus ~ .arrow {
+  z-index: 2;
+}
+.select .toggle:focus ~ .arrow:after {
+  border-top-color: transparent;
+  border-bottom-color: #212121;
+  margin-top: -9px;
+}
+.select .toggle:focus ~ .selected {
+  border-radius: 2px 2px 0 0;
+}
+.select .toggle:focus ~ .dropdown {
+  max-height: 180px;
+  border-color: #212121;
+  opacity: 1;
+}
