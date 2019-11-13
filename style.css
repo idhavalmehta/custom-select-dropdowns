@@ -1,3 +1,6 @@
+/*
+ * Some basic styles.
+ */
 
 .select {
   position: relative;
@@ -5,11 +8,26 @@
   vertical-align: middle;
   display: inline-flex;
 }
+
+.select .arrow,
+.select .toggle {
+  cursor: pointer;
+}
+
+/*
+ * Hide the actual radio buttons.
+ */
+
 .select .radio {
   position: absolute;
   opacity: 0 !important;
   z-index: -1;
 }
+
+/*
+ * Styles for selected value.
+ */
+
 .select .selected {
   width: 100%;
   height: 40px;
@@ -28,9 +46,20 @@
 .select .selected .value {
   line-height: 36px;
 }
+
+/*
+ * Hide the value sibling
+ * if checkbox is not selected.
+ */
+
 .select .selected .radio:not(:checked) + .value {
   display: none;
 }
+
+/*
+ * Styles for dropdown.
+ */
+
 .select .dropdown {
   position: absolute;
   top: 100%;
@@ -58,10 +87,11 @@
 .select .dropdown .value:hover {
   background: lightblue;
 }
-.select .arrow,
-.select .toggle {
-  cursor: pointer;
-}
+
+/*
+ * Styles for the dropdown arrow.
+ */
+
 .select .arrow {
   position: absolute;
   width: 100%;
@@ -81,6 +111,12 @@
   border-style: solid;
   border-color: transparent;
 }
+
+/*
+ * Styles for the input field
+ * which act as the toggle.
+ */
+
 .select .toggle {
   position: absolute;
   left: 0;
@@ -91,6 +127,12 @@
   outline: none;
   border: none;
 }
+
+/*
+ * If input does not have focus,
+ * hide dropdown + some overrides.
+ */
+
 .select .toggle:not(:focus) {
   z-index: 2;
 }
@@ -110,6 +152,12 @@
   border-color: transparent;
   opacity: 0;
 }
+
+/*
+ * If input has focus,
+ * show dropdown + some overrides.
+ */
+
 .select .toggle:focus {
   z-index: 1;
 }
