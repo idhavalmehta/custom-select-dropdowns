@@ -1,0 +1,7 @@
+
+RewriteEngine On
+
+# https and non-www
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule (.*) https://dhaval.xyz/demo/custom-select-dropdowns/$1 [L,R]
